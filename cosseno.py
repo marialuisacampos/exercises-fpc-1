@@ -12,15 +12,13 @@ def cosseno(x):
     z = i * 2
     if (i == 0):
       resultado_final += 1
-      print(f'Resultado final {i} = {resultado_final}')
     else:
       fatorial_atual = z * (z - 1) * fatorial_anterior
       fatorial_anterior = fatorial_atual
       resultado_final += (exponenciacao(-1, i) / fatorial_atual) * exponenciacao(x, z)
-      print(f'Resultado final {i} = {resultado_final}')
 
   return resultado_final
 
-x = float(input('Digite o grau em radianos:'))
+x = float(input())
 total = cosseno(x)
 print("%.4f"%total)
